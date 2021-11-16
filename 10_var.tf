@@ -1,3 +1,8 @@
+variable "true" {
+  type    = bool
+  default = true
+}
+
 variable "name" {
   type    = string
   default = "suuu"
@@ -137,6 +142,7 @@ variable "listener_port" {
   type    = string
   default = "80"
 }
+
 variable "RDS_allocate_sto" {
   type    = number
   default = 20

@@ -10,10 +10,6 @@ resource "aws_lb" "suuu_alb" {
   }
 }
 
-output "alb_dns" {
-  value = aws_lb.suuu_alb.dns_name
-}
-
 resource "aws_lb_target_group" "suuu_albtg" {
   name     = "${var.name}-albtg"
   port     = var.HTTP_port

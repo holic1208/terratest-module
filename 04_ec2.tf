@@ -93,7 +93,3 @@ resource "aws_eip" "suuu_weba_ip" {
     Name = "${var.name}ec2-eip"
   }
 }
-
-output "public_ip" {
-  value = aws_instance.suuu_weba.public_ip
-}

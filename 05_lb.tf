@@ -21,7 +21,7 @@ resource "aws_lb_target_group" "suuu_albtg" {
   vpc_id   = aws_vpc.suuu.id
 
   health_check {
-    enabled             = true
+    enabled             = var.true
     healthy_threshold   = 3
     interval            = 5
     matcher             = "200"

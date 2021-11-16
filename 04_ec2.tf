@@ -83,7 +83,7 @@ resource "aws_instance" "suuu_weba" {
 }
 
 resource "aws_eip" "suuu_weba_ip" {
-  vpc                       = true
+  vpc                       = var.true
   instance                  = aws_instance.suuu_weba.id
   associate_with_private_ip = var.ec2_private_ip
   depends_on = [

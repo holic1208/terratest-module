@@ -41,6 +41,10 @@ resource "aws_autoscaling_group" "suuu_asg" {
   force_delete              = true
   launch_configuration      = aws_launch_configuration.suuu_aslc.name
   vpc_zone_identifier       = [aws_subnet.suuu_pub[0].id, aws_subnet.suuu_pub[1].id]
+  tags = {
+    key                 = "Name"
+    value               = "${var.name}as-ec2"
+  }
 }
 
 resource "aws_autoscaling_attachment" "suuu_asgalbatt" {

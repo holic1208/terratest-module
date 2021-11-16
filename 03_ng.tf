@@ -1,5 +1,5 @@
 resource "aws_eip" "suuu_ng" {
-  vpc = true
+  vpc = var.true
   tags = {
     Name = "${var.name}nat-eip"
   }
